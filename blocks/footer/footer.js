@@ -16,10 +16,23 @@ export default async function decorate(block) {
     const html = await resp.text();
 
     // decorate footer DOM
-    const footer = document.createElement('div');
-    footer.innerHTML = html;
+    //const footer = document.createElement('div');
+    //footer.innerHTML = html;
 
-    decorateIcons(footer);
-    block.append(footer);
+    block.innerHTML = html;
+
+console.log(html)
+
+console.log(block)
+
+const classes = ['brand', 'copy'];
+let f = block.firstElementChild;
+while (f && classes.length) {
+  f.classList.add(classes.shift());
+  f = f.nextElementSibling;
+}
+
+    //decorateIcons(footer);
+    //block.append(footer);
   }
 }

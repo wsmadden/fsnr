@@ -15,9 +15,12 @@
   --link-color: #035fe6;
   --link-hover-color: #136ff6;
   --background-color: #fff;
+  --background-black: #000;
   --overlay-background-color: #eee;
   --highlight-background-color: #ccc;
-  --text-color: #000;
+  --text-color-black: #000;
+  --text-color-gray: #eee;
+  --text-color-white: #fff;
   --platinum: #e7e7e7;
 
   /* fonts */
@@ -26,7 +29,7 @@
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
   /* body sizes */
-  --body-font-size-m: 22px;
+  --body-font-size-m: 1rem;
   --body-font-size-s: 18px;
   --body-font-size-xs: 16px;
 
@@ -122,14 +125,16 @@ main pre {
   white-space: pre;
 }
 
+/*
 a:any-link {
   color: var(--link-color);
   text-decoration: none;
 }
+*/
 
 a:hover {
   text-decoration: underline;
-  color: var(--link-hover-color);
+  /*color: var(--link-hover-color);*/
 }
 
 /* buttons */

@@ -1,92 +1,71 @@
-.footer {
-  background-color: #000;
+footer {
+  background-color: var(--background-black);
 }
-.footer .cmp-footer {
+.footer-wrapper .block {
   margin: 0 auto;
   max-width: 90pc;
   padding: 20px;
 }
-.footer .cmp-footer .cmp-footer__logo {
+.footer-wrapper .block .brand {
   margin: 0 auto 20px;
   text-align: center;
 }
-.footer .cmp-footer .cmp-footer__links .cmp-simple-list {
-  border-bottom: 1px solid #eee;
-  list-style: none;
+.footer-wrapper .block .copy ul {
+  border-bottom: 1px solid var(--text-color-gray);
   margin: 0 0 1pc;
   padding: 0 0 1pc;
+  list-style: none;
 }
-.footer .cmp-footer .cmp-footer__links .cmp-simple-list .cmp-simple-list__item {
+.footer-wrapper .block .copy li {
   margin: 0 0 24px;
   padding: 0;
   text-align: center;
 }
-.footer
-  .cmp-footer
-  .cmp-footer__links
-  .cmp-simple-list
-  .cmp-simple-list__item:last-child {
+.footer-wrapper .block .copy li:last-child {
   margin-bottom: 0;
 }
-.footer
-  .cmp-footer
-  .cmp-footer__links
-  .cmp-simple-list
-  .cmp-simple-list__item
-  .cmp-simple-list__item-link {
-  color: #fff;
-  font-family: avenir-heavy,
-      '-apple-system, BlinkMacSystemFont, Helvetica, "Segoe UI", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
+.footer-wrapper .block .copy a {
+  color: var(--text-color-white);
   text-decoration: none;
 }
-.footer
-  .cmp-footer
-  .cmp-footer__links
-  .cmp-simple-list
-  .cmp-simple-list__item
-  .cmp-simple-list__item-link:hover {
+.footer .copy li:hover {
   opacity: 0.7;
 }
-.footer .cmp-footer .cmp-footer__links .cmp-text p {
-  color: #fff;
+.footer-wrapper .block p {
+  color: var(--text-color-white);
   font-size: 0.75rem;
   text-align: center;
 }
+
 @media (min-width: 1024px) {
-  .footer .cmp-footer {
-      display: flex;
-      padding: 40px;
+  .footer-wrapper .block {
+    display: flex;
+    padding: 40px;
   }
-  .footer .cmp-footer .cmp-footer__logo {
-      margin: 0;
+  .footer-wrapper .block .brand {
+    margin: 0;
   }
-  .footer .cmp-footer .cmp-footer__links {
-      flex-grow: 1;
+  .footer-wrapper .block .copy {
+    flex-grow: 1;
+    text-align: right;
   }
-  .footer .cmp-footer .cmp-footer__links .cmp-simple-list {
-      margin: 0 0 8px 1pc;
-      padding: 0 0 8px;
-      text-align: right;
+  .footer-wrapper .block .copy ul {
+    margin: 0 0 8px 1pc;
+    padding: 0;
+    text-align: right;
   }
-  .footer
-      .cmp-footer
-      .cmp-footer__links
-      .cmp-simple-list
-      .cmp-simple-list__item {
-      display: inline-block;
-      margin: 0 8px;
-      padding: 0 8px;
-      text-align: right;
+  .footer-wrapper .block .copy li {
+    display: inline-block;
+    margin: 0 5px 8px;
+    padding: 0 8px;
+  }  
+  .footer-wrapper .block .copy li:last-child {
+    margin-right: 0;
+    padding-right: 0;
   }
-  .footer
-      .cmp-footer
-      .cmp-footer__links
-      .cmp-simple-list
-      .cmp-simple-list__item:last-child {
-      margin-right: 0;
-      padding-right: 0;
+  .footer-wrapper .block p {
+    text-align: right;
+    margin: 0;
   }
-  .footer .cmp-footer .cmp-footer__links .cmp-text p {
-      text-align: right;
-  }
+
 }
