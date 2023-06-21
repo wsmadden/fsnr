@@ -40,6 +40,7 @@
     .article-header.block {
         margin: 7pc 12pc 9pc;
     }
+
     .article-header h1 {
         font-size: var(--heading-font-size-xxl);
         line-height: 72px;
