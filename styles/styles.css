@@ -24,9 +24,9 @@
   --platinum: #e7e7e7;
 
   /* fonts */
-  --body-font-family: 'helvetica neue', helvetica, ubuntu, roboto, noto, sans-serif;
-  --heading-font-family: var(--body-font-family);
-  --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
+  --body-font-family: avenir-book,'-apple-system, BlinkMacSystemFont, Helvetica, "Segoe UI", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
+  --heading-font-family: avenir-heavy,'-apple-system, BlinkMacSystemFont, Helvetica, "Segoe UI", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
+  --fixed-font-family: var(--body-font-family);
 
   /* body sizes */
   --body-font-size-m: 1rem;
@@ -48,14 +48,16 @@
 
 @media (min-width: 900px) {
   :root {
-    --heading-font-size-xxl: 60px;
+    --heading-font-size-xxl: 58px;
     --heading-font-size-xl: 48px;
-    --heading-font-size-l: 36px;
+    --heading-font-size-l: 40px;
     --heading-font-size-m: 30px;
     --heading-font-size-s: 24px;
     --heading-font-size-xs: 22px;
   }
 }
+
+@import "fonts.css";
 
 body {
   font-size: var(--body-font-size-m);
@@ -79,9 +81,8 @@ h1, h2, h3,
 h4, h5, h6 {
   font-family: var(--heading-font-family);
   font-weight: 600;
-  line-height: 1.25;
-  margin-top: 1em;
-  margin-bottom: .5em;
+  line-height: 72px;
+  margin: 0;
   scroll-margin: calc(var(--nav-height) + 1em);
 }
 
@@ -227,23 +228,159 @@ main img {
 }
 
 main .section {
-  padding: 64px 16px;
+  /*padding: 64px 16px;*/
 }
 
 @media (min-width: 600px) {
-  main .section {
+  /*main .section {
     padding: 64px 32px;
-  }
+  }*/
 }
 
 @media (min-width: 900px) {
-  .section > div {
+  /*.section > div {
     max-width: 1200px;
     margin: auto;
-  }
+  }*/
 }
 
 /* section metadata */
 main .section.highlight {
   background-color: var(--highlight-background-color);
 }
+
+/* Backgrounds */
+
+.cmp-section-background-hero-7 {
+  background-image: url(/styles/resources/icons/bg-hero-mobile-leaf-black-solid-outline-left.svg), url(/styles/resources/icons/bg-hero-mobile-leaf-black-solid-outline-right.svg);
+  background-position: 0 100%, 100% 100%;
+  background-repeat: no-repeat, no-repeat
+}
+
+@media(min-width:1024px) {
+  .cmp-section-background-hero-7 {
+      background-image: url(/styles/resources/icons/bg-hero-leaf-black-solid-outline-left.svg), url(/styles/resources/icons/bg-hero-leaf-black-solid-outline-right.svg);
+      background-position: 0, 100% 0
+  }
+}
+
+/*
+.cmp-section.cmp-section-background-leaf-black-outline .cmp-section__wrapper {
+    background-image: url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/icons/icon-leaf-black-outline-left.svg), url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/icons/icon-leaf-black-outline-right.svg);
+    background-position: 0 100%, 100% 100%;
+    background-repeat: no-repeat, no-repeat
+}
+
+.cmp-section.cmp-section-background-leaf-black-outline-solid .cmp-section__wrapper {
+    background-image: url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/icons/icon-leaf-black-outline-solid-left.svg), url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/icons/icon-leaf-black-outline-solid-right.svg);
+    background-position: 0 100%, 100% 100%;
+    background-repeat: no-repeat, no-repeat
+}
+
+.cmp-section.cmp-section-background-leaf-black-red-outline .cmp-section__wrapper {
+    background-image: url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/icons/icon-leaf-black-red-outline-left.svg), url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/icons/icon-leaf-black-red-outline-right.svg);
+    background-position: 0 100%, 100% 100%;
+    background-repeat: no-repeat, no-repeat
+}
+
+.cmp-section.cmp-section-background-leaf-black-solid .cmp-section__wrapper {
+    background-image: url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/icons/icon-leaf-black-solid-left.svg), url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/icons/icon-leaf-black-solid-right.svg);
+    background-position: 0 100%, 100% 100%;
+    background-repeat: no-repeat, no-repeat
+}
+
+.cmp-section.cmp-section-background-leaf-gray-outline .cmp-section__wrapper {
+    background-image: url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/icons/icon-leaf-gray-outline-left.svg), url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/icons/icon-leaf-gray-outline-right.svg);
+    background-position: 0 100%, 100% 100%;
+    background-repeat: no-repeat, no-repeat
+}
+
+.cmp-section.cmp-section-background-hero-1 .cmp-section__wrapper {
+    background-image: url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/images/bg-hero-mobile-bowl-black-left.svg), url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/images/bg-hero-mobile-leaf-black-outline-red-solid-right.svg);
+    background-position: 0 100%, 100% 100%;
+    background-repeat: no-repeat, no-repeat
+}
+
+@media(min-width:1024px) {
+    .cmp-section.cmp-section-background-hero-1 .cmp-section__wrapper {
+        background-image: url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/images/bg-hero-horn-black-left.svg), url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/images/bg-hero-bowl-black-leaf-red-right.svg)
+    }
+}
+
+.cmp-section.cmp-section-background-hero-2 .cmp-section__wrapper {
+    background-image: url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/images/bg-hero-mobile-horn-black-left.svg), url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/images/bg-hero-mobile-leaf-red-right.svg);
+    background-position: 0 100%, 100% 100%;
+    background-repeat: no-repeat, no-repeat
+}
+
+@media(min-width:1024px) {
+    .cmp-section.cmp-section-background-hero-2 .cmp-section__wrapper {
+        background-image: url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/images/bg-hero-horn-black-left.svg), url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/images/bg-hero-leaf-black-red-right.svg)
+    }
+}
+
+.cmp-section.cmp-section-background-hero-3 .cmp-section__wrapper {
+    background-image: url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/images/bg-hero-mobile-bowl-black-left.svg), url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/images/bg-hero-mobile-leaf-black-red-right.svg);
+    background-position: 0 100%, 100% 100%;
+    background-repeat: no-repeat, no-repeat
+}
+
+@media(min-width:1024px) {
+    .cmp-section.cmp-section-background-hero-3 .cmp-section__wrapper {
+        background-image: url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/images/bg-hero-bowl-black-leaf-red-left.svg), url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/images/bg-hero-leaf-black-red-right.svg)
+    }
+}
+
+.cmp-section.cmp-section-background-hero-4 .cmp-section__wrapper {
+    background-image: url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/images/bg-hero-mobile-faucet-red-left.svg), url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/images/bg-hero-mobile-bowl-black-right.svg);
+    background-position: 0 100%, 100% 100%;
+    background-repeat: no-repeat, no-repeat
+}
+
+@media(min-width:1024px) {
+    .cmp-section.cmp-section-background-hero-4 .cmp-section__wrapper {
+        background-image: url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/images/bg-hero-leaf-black-faucet-red-left.svg), url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/images/bg-hero-bowl-red-right.svg)
+    }
+}
+
+.cmp-section.cmp-section-background-hero-5 .cmp-section__wrapper {
+    background-image: url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/images/bg-hero-mobile-bowl-black-left.svg), url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/images/bg-hero-mobile-leaf-black-red-right.svg);
+    background-position: 0 100%, 100% 100%;
+    background-repeat: no-repeat, no-repeat
+}
+
+@media(min-width:1024px) {
+    .cmp-section.cmp-section-background-hero-5 .cmp-section__wrapper {
+        background-image: url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/images/bg-hero-bowl-black-leaf-red-left.svg), url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/images/bg-hero-faucet-red-right.svg)
+    }
+}
+
+.cmp-section.cmp-section-background-hero-6 .cmp-section__wrapper {
+    background-image: url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/images/bg-hero-mobile-bowl-red-left.svg), url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/images/bg-hero-mobile-leaf-black-outline-right.svg);
+    background-position: 0 100%, 100% 100%;
+    background-repeat: no-repeat, no-repeat
+}
+
+@media(min-width:1024px) {
+    .cmp-section.cmp-section-background-hero-6 .cmp-section__wrapper {
+        background-image: url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/images/bg-hero-leaf-black-left.svg), url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/images/bg-hero-bowl-red-right.svg);
+        background-position: 0 0, 100% 100%
+    }
+}
+
+.cmp-section.cmp-section-background-error .cmp-section__wrapper {
+    background-image: url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/images/bg-error-mobile-background-bottom-left.svg), url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/images/bg-error-mobile-background-top-right.svg);
+    background-position: 0 100%, 100% 0;
+    background-repeat: no-repeat, no-repeat
+}
+
+@media(min-width:1024px) {
+    .cmp-section.cmp-section-background-error .cmp-section__wrapper {
+        background-image: url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/images/bg-error-background-top-left.svg), url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/images/bg-error-background-bottom-left.svg), url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/images/bg-error-background-top-right.svg), url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/images/bg-error-background-bottom-right.svg);
+        background-position: 0 0, 0 100%, 100% 0, 100% 100%;
+        background-repeat: no-repeat, no-repeat, no-repeat, no-repeat
+    }
+}
+*/
+
+

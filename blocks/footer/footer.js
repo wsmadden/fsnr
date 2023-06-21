@@ -14,25 +14,14 @@ export default async function decorate(block) {
 
   if (resp.ok) {
     const html = await resp.text();
-
-    // decorate footer DOM
-    //const footer = document.createElement('div');
-    //footer.innerHTML = html;
-
     block.innerHTML = html;
 
-console.log(html)
+    const classes = ['brand', 'copy'];
+    let f = block.firstElementChild;
+    while (f && classes.length) {
+      f.classList.add(classes.shift());
+      f = f.nextElementSibling;
+    }
 
-console.log(block)
-
-const classes = ['brand', 'copy'];
-let f = block.firstElementChild;
-while (f && classes.length) {
-  f.classList.add(classes.shift());
-  f = f.nextElementSibling;
-}
-
-    //decorateIcons(footer);
-    //block.append(footer);
   }
 }

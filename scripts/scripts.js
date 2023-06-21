@@ -36,6 +36,7 @@ function buildHeroBlock(main) {
  */
 function buildAutoBlocks(main) {
   try {
+    if (document.body.classList.contains('article')) buildArticleHeader(main);
     buildHeroBlock(main);
   } catch (error) {
     // eslint-disable-next-line no-console
@@ -107,6 +108,37 @@ async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
+}
+
+/**
+ * Retrieves the content of a metadata tag.
+ * @param {string} name The metadata name (or property)
+ * @returns {string} The metadata value
+ */
+ export function getMetadata(name) {
+  const attr = name && name.includes(':') ? 'property' : 'name';
+  const $meta = document.head.querySelector(`meta[${attr}="${name}"]`);
+  return $meta && $meta.content;
+}
+
+/*
+ * Article header auto blocking
+ * @param {mainEl} main The main element
+ */
+function buildArticleHeader(mainEl) {
+  const div = document.createElement('div');
+  const h1 = mainEl.querySelector('h1');
+  const publicationDate = getMetadata('publication-date');
+  const location = getMetadata('location');
+  
+  const articleHeaderBlockEl = buildBlock('article-header', [
+    [`<p>${publicationDate}</p>`],
+    [h1],
+    [`<p>${location}</p>`],
+  ]);
+ 
+  div.append(articleHeaderBlockEl);
+  mainEl.prepend(div);
 }
 
 loadPage();

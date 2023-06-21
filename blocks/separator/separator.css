@@ -1,7 +1,24 @@
-.separator.block hr {
-    margin: 1em auto;
-    max-width: var(--normal-page-width);
-    height: 1px;
-    border: none;
-    background: var(--platinum);
+.separator.block {
+    padding: 24px 0 0;
+}
+
+.separator.block hr.flower {
+    border-bottom: 1px solid gray;
+    border-top: none;
+    color: #cacaca;
+    height: 0;
+    margin: 0 auto 8px;
+    overflow: visible;
+    padding: 0;
+    text-align: center;
+    width: 10rem;
+}
+
+.separator.block hr.flower:after {
+    background-color: #fff;
+    content: url(/styles/resources/icons/icon-separator-red.svg);
+    display: inline-block;
+    padding: 0 4px;
+    position: relative;
+    top: -9pt;
 }

@@ -1,31 +1,56 @@
-.cards > ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 16px;
-}
-
-.cards > ul > li {
-  border: 1px solid var(--highlight-background-color);
-  background-color: var(--background-color)
-}
-
-.cards .cards-card-body {
-  margin: 16px;
-}
-
-.cards .cards-card-image {
-  line-height: 0;
-}
-
-.cards .cards-card-body > *:first-child {
-  margin-top: 0;
-}
-
-.cards > ul > li img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-}
+.article-card ul {
+    align-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: none;
+    height: 100%;
+    justify-content: center;
+    margin: auto;
+    max-width: 64pc;
+    padding: 24px;
+  }
+  @media (min-width: 1024px) {
+    .article-card ul {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+   .article-card .card {
+    background-color: #f0f0f0;
+    height: 440px;
+    margin: 20px;
+    width: 280px;
+  }
+  .article-list .article-card .article-card__image img {
+    width: 100%;
+  }
+  .article-list .article-card .article-card__copy {
+    padding: 1pc;
+  }
+  .article-list .article-card .article-card__category {
+    display: none;
+  }
+  .article-list .article-card .article-card__publicationDate {
+    color: #646464;
+    font-size: 14px;
+    line-height: 1pc;
+    margin-bottom: 1pc;
+  }
+  .article-list .article-card .article-card__headline,
+  .article-list .article-card .article-card__publicationDate {
+    font-family: avenir-heavy,
+      '-apple-system, BlinkMacSystemFont, Helvetica, "Segoe UI", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
+  }
+  .article-list .article-card .article-card__headline {
+    color: #000;
+    font-size: 24px;
+    line-height: 2pc;
+    margin: 0;
+  }
+  .article-list .article-card .article-card__headline a {
+    color: #000;
+    text-decoration: none;
+  }
+  .article-list .article-card .article-card__headline a:hover {
+    text-decoration: none;
+  }
+  
