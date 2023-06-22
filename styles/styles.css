@@ -23,11 +23,14 @@
   --text-color-black: #000;
   --text-color-gray: #eee;
   --text-color-white: #fff;
+  --text-color-red: #d30000;
   --platinum: #e7e7e7;
 
   /* fonts */
   --body-font-family: avenir-book,'-apple-system, BlinkMacSystemFont, Helvetica, "Segoe UI", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
   --heading-font-family: avenir-heavy,'-apple-system, BlinkMacSystemFont, Helvetica, "Segoe UI", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
+  --body-font-family-heavy: avenir-heavy,'-apple-system, BlinkMacSystemFont, Helvetica, "Segoe UI", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
+  --body-font-family-medium: avenir-medium,'-apple-system, BlinkMacSystemFont, Helvetica, "Segoe UI", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
   --fixed-font-family: var(--body-font-family);
 
   /* body sizes */
@@ -138,7 +141,7 @@ a:hover {
   /*color: var(--link-hover-color);*/
 }
 
-/* buttons */
+/* buttons  
 a.button:any-link, button {
   font-family: var(--body-font-family);
   display: inline-block;
@@ -174,6 +177,7 @@ a.button.secondary, button.secondary {
   border: 2px solid currentcolor;
   color: var(--text-color)
 }
+*/
 
 main input {
   font-size: 1.25rem;
