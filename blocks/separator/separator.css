@@ -2,7 +2,7 @@
     padding: 24px 0 0;
 }
 
-.separator.block hr.flower {
+.separator.block hr {
     border-bottom: 1px solid gray;
     border-top: none;
     color: #cacaca;
@@ -14,7 +14,7 @@
     width: 10rem;
 }
 
-.separator.block hr.flower:after {
+.separator.block hr:after {
     background-color: #fff;
     content: url(/styles/resources/icons/icon-separator-red.svg);
     display: inline-block;

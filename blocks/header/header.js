@@ -103,7 +103,7 @@ export default async function decorate(block) {
     nav.id = 'nav';
     nav.innerHTML = html;
 
-    const classes = ['brand', 'sections', 'tools'];
+    const classes = ['sections'];
     classes.forEach((c, i) => {
       const section = nav.children[i];
       if (section) section.classList.add(`nav-${c}`);
@@ -113,11 +113,12 @@ export default async function decorate(block) {
     if (navSections) {
       navSections.querySelectorAll(':scope > ul > li').forEach((navSection) => {
         if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
-        navSection.addEventListener('click', () => {
+        navSection.addEventListener('mouseover', () => {
           if (isDesktop.matches) {
             const expanded = navSection.getAttribute('aria-expanded') === 'true';
             toggleAllNavSections(navSections);
-            navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+            //navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+            navSection.setAttribute('aria-expanded', 'true');
           }
         });
       });
@@ -130,16 +131,33 @@ export default async function decorate(block) {
         <span class="nav-hamburger-icon"></span>
       </button>`;
     hamburger.addEventListener('click', () => toggleMenu(nav, navSections));
-    nav.prepend(hamburger);
+    nav.append(hamburger);
     nav.setAttribute('aria-expanded', 'false');
     // prevent mobile nav behavior on window resize
     toggleMenu(nav, navSections, isDesktop.matches);
     isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
 
     decorateIcons(nav);
+    nav.prepend(buildLogo());
     const navWrapper = document.createElement('div');
     navWrapper.className = 'nav-wrapper';
     navWrapper.append(nav);
     block.append(navWrapper);
   }
+}
+
+/**
+ * Builds the Logo Div.
+ * @returns {HTMLDivElement}
+ */
+function buildLogo() {
+  // Add the Logo.
+  const logo = document.createElement('div');
+  logo.classList.add('nav-brand');
+  logo.innerHTML = `
+      <a href="/" title="Firestone Natural Rubber Company">
+        <img src="/styles/resources/images/logo-firestone-natural-rubber.svg" alt="Firestone Natural Rubber Company" loading="lazy">
+      </a>
+    `;
+  return logo;
 }

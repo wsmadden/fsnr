@@ -15,6 +15,12 @@ import {
 
 const LCP_BLOCKS = []; // add your LCP blocks to the list
 
+export const BREAKPOINTS = {
+  small: window.matchMedia('(min-width: 600px)'),
+  medium: window.matchMedia('(min-width: 900px)'),
+  large: window.matchMedia('(min-width: 1200px)'),
+};
+
 /**
  * Builds hero block and prepends to main in a new section.
  * @param {Element} main The container element
