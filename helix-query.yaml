@@ -18,6 +18,18 @@ indices:
         select: head > meta[name="publication-date"]
         value: |
           parseTimestamp(attribute(el, 'content'), 'MM/DD/YYYY')
+      publication-date:
+        select: head > meta[name="publication-date"]
+        value: |
+          attribute(el, 'content')
+      location:
+        select: head > meta[name="location"]
+        value: |
+          attribute(el, 'content')
+      category:
+        select: head > meta[name="category"]
+        value: |
+          attribute(el, 'content') 
       image:
         select: head > meta[property="og:image"]
         value: |
