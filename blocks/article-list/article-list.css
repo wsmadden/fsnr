@@ -1,0 +1,72 @@
+.article-list-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+}
+
+.article-list {
+    align-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: none;
+    height: 100%;
+    justify-content: center;
+    margin: auto;
+    max-width: 64pc;
+    padding: 24px
+}
+
+@media(min-width:1024px) {
+    .article-list {
+        grid-template-columns: repeat(3, 1fr)
+    }
+}
+
+.article-list .article-card {
+    background-color: #f0f0f0;
+    height: 440px;
+    margin: 20px;
+    width: 280px
+}
+
+.article-list .article-card .article-card__image img {
+    width: 100%
+}
+
+.article-list .article-card .article-card__copy {
+    padding: 1pc
+}
+
+.article-list .article-card .article-card__category {
+    display: none
+}
+
+.article-list .article-card .article-card__publicationDate {
+    color: #646464;
+    font-size: 14px;
+    line-height: 1pc;
+    margin-bottom: 1pc
+}
+
+.article-list .article-card .article-card__headline,
+.article-list .article-card .article-card__publicationDate {
+    font-family: avenir-heavy, '-apple-system, BlinkMacSystemFont, Helvetica, "Segoe UI", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
+}
+
+.article-list .article-card .article-card__headline {
+    color: #000;
+    font-size: 24px;
+    line-height: 2pc;
+    margin: 0
+}
+
+.article-list .article-card .article-card__headline a {
+    color: #000;
+    text-decoration: none
+}
+
+.article-list .article-card .article-card__headline a:hover {
+    text-decoration: none
+}

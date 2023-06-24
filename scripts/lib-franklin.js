@@ -426,7 +426,6 @@ export function buildBlock(blockName, content) {
  */
 export async function loadBlock(block) {
   const status = block.dataset.blockStatus;
-  console.log("Load Block", block);
   if (status !== 'loading' && status !== 'loaded') {
     block.dataset.blockStatus = 'loading';
     const { blockName } = block.dataset;
