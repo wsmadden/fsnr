@@ -43,7 +43,7 @@ function buildHeroBlock(main) {
 function buildAutoBlocks(main) {
   try {
     if (document.body.classList.contains('article')) buildArticleHeader(main);
-    buildHeroBlock(main);
+    //buildHeroBlock(main);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
