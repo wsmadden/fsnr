@@ -1,7 +1,13 @@
 .content-block {
-  flex-basis: 100%;
-  margin: 0 auto;
-  max-width: 90pc
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  position: relative;
+}
+
+.content-block.gray-background {
+  background-color: #f0f0f0
 }
 
 .content-block .cmp-teaser {
@@ -35,7 +41,8 @@
   order: 1
 }
 
-.content-block.gray-background .cmp-teaser .cmp-teaser__content {
+.content-block.gray-background .cmp-teaser .cmp-teaser__content,
+.content-block.gray-background .cmp-teaser .cmp-teaser__image {
   background-color: #f0f0f0;
 }
 
@@ -145,7 +152,7 @@
 }
 
 @media(min-width:1024px) {
-  .content-block.cmp-teaser--hero-background-color-gray {
+  .content-block.gray-background {
       background-color: transparent
   }
 }
@@ -471,7 +478,7 @@
   }
 }
 
-.cmp-teaser--hero-image-fill .cmp-teaser .cmp-teaser__image .cmp-image img {
+.content-block.hero-image-fill .cmp-teaser .cmp-teaser__image .cmp-image img {
   margin: 0 0 24px;
   width: 100%
 }
