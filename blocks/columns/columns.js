@@ -8,7 +8,6 @@ export default function decorate(block) {
     row.className = "card teaser";
      
     [...row.children].forEach((col) => {
-      console.log("col", col);
 
       col.className = "cmp-teaser";
 
