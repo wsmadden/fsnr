@@ -69,3 +69,11 @@ article .article-body p {
 article .article-body ul {
     margin-right: 1pc;
 }
+
+article picture {
+}
+
+article picture img {
+    width: 100%;
+    height: auto;
+}
