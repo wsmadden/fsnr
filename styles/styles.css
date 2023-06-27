@@ -91,6 +91,7 @@ h4, h5, h6 {
 
 h2 {
   text-align: center;
+  margin-top: 40px;
 }
 
 h1 { font-size: var(--heading-font-size-xxl) }
@@ -219,9 +220,11 @@ main blockquote p::after {
 }
 
 main img {
+  /*
   max-width: 100%;
   width: auto;
   height: auto;
+  */
 }
 
 .icon {

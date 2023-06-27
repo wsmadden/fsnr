@@ -1,8 +1,6 @@
 import { createOptimizedPicture } from '../../scripts/lib-franklin.js';
 
 export default async function decorate(block) {
-
-    console.log("this block", block);
   
     let articles;
     const items = block.querySelector('ul');
@@ -32,8 +30,6 @@ export default async function decorate(block) {
 
         }))).filter((item) => item); // filter out null values returned from the for loop
 
-        console.log("data", data);
-
         block.innerHTML = decorateArticleCards(data);
 
     }
@@ -55,10 +51,6 @@ function decorateArticleCards(data) {
             false,
             [{ width: 300 }],
           );
-          //img = picture.querySelector('img');
-          //img.width = 768;
-          //img.height = 432;
-//                <img src="${article.image}" alt="${article.imageAlt}" loading="lazy">
 
         const template = `
             <div class="article-card__image">
@@ -78,7 +70,5 @@ function decorateArticleCards(data) {
     });
 
     return articleWrapper.innerHTML;
-
-    console.log(articleWrapper);
 
 }

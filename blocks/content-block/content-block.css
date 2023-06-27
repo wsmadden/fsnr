@@ -1,16 +1,39 @@
-.content-block {
-  align-items: center;
+.content-block-wrapper {
   display: flex;
   flex-wrap: wrap;
-  padding: 0;
-  position: relative;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
 }
 
-.content-block.gray-background {
-  background-color: #f0f0f0
+.content-block {
+  flex-basis: 100%;
+  margin: 0 auto;
+  max-width: 90pc;
 }
 
-.content-block .cmp-teaser {
+.content-block .cmp-teaser a {
+  text-decoration: none;
+  color: var(--text-color-black);
+}
+
+.content-block .cmp-teaser .cmp-teaser__content em {
+  font-family: var(--body-font-family-heavy);
+}
+
+.content-block .cmp-teaser .cmp-teaser__content h2 {
+  text-align: left;
+}
+
+/*
+.content-block.hero {
+  flex-basis: 100%;
+  margin: 0 auto;
+  max-width: 90pc
+}
+*/
+
+.content-block.content-block.hero .cmp-teaser {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
@@ -19,34 +42,25 @@
   position: relative
 }
 
-.content-block .cmp-teaser a {
-  text-decoration: none;
-  color: var(--text-color-black);
-}
-
-.content-block .cmp-teaser .cmp-teaser__image {
+.content-block.hero .cmp-teaser .cmp-teaser__image {
   flex-basis: 100%;
   order: 0
 }
 
-.content-block .cmp-teaser .cmp-teaser__image .cmp-image img {
+.content-block.hero .cmp-teaser .cmp-teaser__image .cmp-image .cmp-image__image {
   display: block;
   margin: 0 auto;
   max-width: 100%;
-  width: 100%
+  width: 100%;
+  height: auto;
 }
 
-.content-block .cmp-teaser .cmp-teaser__content {
+.content-block.hero .cmp-teaser .cmp-teaser__content {
   flex-basis: 100%;
   order: 1
 }
 
-.content-block.gray-background .cmp-teaser .cmp-teaser__content,
-.content-block.gray-background .cmp-teaser .cmp-teaser__image {
-  background-color: #f0f0f0;
-}
-
-.content-block .cmp-teaser .cmp-teaser__content em {
+.content-block.hero .cmp-teaser .cmp-teaser__content em {
   color: #d30000;
   font-size: 14px;
   line-height: 1pc;
@@ -54,252 +68,57 @@
   font-style: normal;
 }
 
-.content-block .cmp-teaser .cmp-teaser__content em {
-  font-family: var(--body-font-family-heavy);
+.content-block.hero .cmp-teaser .cmp-teaser__content em,
+.content-block.hero .cmp-teaser .cmp-teaser__content h2 {
+  font-family: avenir-heavy, '-apple-system, BlinkMacSystemFont, Helvetica, "Segoe UI", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
 }
 
-.content-block .cmp-teaser .cmp-teaser__content .cmp-teaser__title {
+.content-block.hero .cmp-teaser .cmp-teaser__content h2 {
   color: #000;
   font-size: 28px;
   line-height: 36px;
   margin: 0 0 1pc
 }
 
-.content-block .cmp-teaser .cmp-teaser__content .cmp-teaser__title .cmp-teaser__title-link {
+.content-block.hero .cmp-teaser .cmp-teaser__content h2 a {
   color: #000;
   text-decoration: none
 }
 
-.content-block .cmp-teaser .cmp-teaser__content h2 {
+.content-block.hero .cmp-teaser .cmp-teaser__content p {
   color: #000;
-  font-size: 28px;
-  line-height: 36px;
-  margin: 0 0 1pc;
-  text-align: left;
-}
-
-.content-block .cmp-teaser .cmp-teaser__content p {
-  color: #000;
-  font-family: var(--body-font-family-medium);
+  font-family: avenir-medium, '-apple-system, BlinkMacSystemFont, Helvetica, "Segoe UI", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
   font-size: 1pc;
   line-height: 1.5;
   margin: 0 0 24px
 }
 
-.content-block .cmp-teaser .cmp-teaser__content .content-block h1,
-.content-block .cmp-teaser .cmp-teaser__content .content-block h2,
-.content-block .cmp-teaser .cmp-teaser__content .content-block h3,
-.content-block .cmp-teaser .cmp-teaser__content .content-block h4,
-.content-block .cmp-teaser .cmp-teaser__content .content-block h5,
-.content-block .cmp-teaser .cmp-teaser__content .content-block h6 {
-  font-family: var(--body-font-family-heavy);
+.content-block.hero .cmp-teaser .cmp-teaser__content .cmp-teaser__description h1,
+.content-block.hero .cmp-teaser .cmp-teaser__content .cmp-teaser__description h2,
+.content-block.hero .cmp-teaser .cmp-teaser__content .cmp-teaser__description h3,
+.content-block.hero .cmp-teaser .cmp-teaser__content .cmp-teaser__description h4,
+.content-block.hero .cmp-teaser .cmp-teaser__content .cmp-teaser__description h5,
+.content-block.hero .cmp-teaser .cmp-teaser__content .cmp-teaser__description h6 {
+  color: #d30000;
+  font-family: avenir-heavy, '-apple-system, BlinkMacSystemFont, Helvetica, "Segoe UI", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
 }
 
-.content-block .cmp-teaser .cmp-teaser__content .content-block li,
-.content-block .cmp-teaser .cmp-teaser__content .content-block ul {
+.content-block.hero .cmp-teaser .cmp-teaser__content .cmp-teaser__description li,
+.content-block.hero .cmp-teaser .cmp-teaser__content .cmp-teaser__description ul {
   color: #000;
-  font-family: var(--body-font-family-medium);
+  font-family: avenir-medium, '-apple-system, BlinkMacSystemFont, Helvetica, "Segoe UI", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
   font-size: 1pc;
   line-height: 1.5
 }
 
-.content-block .button-container a {
+.content-block.hero .cmp-teaser .cmp-teaser__content .button-container a {
   background-color: #d30000;
   border-radius: 4px;
   color: #fff;
   display: inline-block;
-  font-family: var(--body-font-family-heavy);;
+  font-family: avenir-heavy, '-apple-system, BlinkMacSystemFont, Helvetica, "Segoe UI", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
   padding: 9pt 24px;
   text-decoration: none
-}
-
-@media(min-width:1024px) {
-  .content-block .cmp-teaser {
-      margin: 40px;
-      padding: 0
-  }
-
-  .content-block .cmp-teaser .cmp-teaser__image {
-      flex-basis: 50%;
-      margin: 0;
-      padding: 0
-  }
-
-  .content-block .cmp-teaser .cmp-teaser__image .cmp-image img {
-      width: auto
-  }
-
-  .content-block .cmp-teaser .cmp-teaser__content {
-      flex-basis: 50%
-  }
-
-  .content-block .cmp-teaser .cmp-teaser__content h2 {
-    text-align: left;
-    font-size: 34px;
-    line-height: 46px;    
-    width: 75%;
-  }
-
-  .content-block .cmp-teaser .cmp-teaser__content p {
-  }
-
-}
-
-.content-block.cmp-teaser--hero-background-color-gray,
-.content-block.cmp-teaser--hero-background-color-gray .cmp-teaser .cmp-teaser__content,
-.content-block.cmp-teaser--hero-background-color-gray .cmp-teaser .cmp-teaser__image {
-  background-color: #f0f0f0
-}
-
-@media(min-width:1024px) {
-  .content-block.gray-background {
-      background-color: transparent
-  }
-}
-
-.content-block.cmp-teaser--hero-background-color-white,
-.content-block.cmp-teaser--hero-background-color-white .cmp-teaser .cmp-teaser__content,
-.content-block.cmp-teaser--hero-background-color-white .cmp-teaser .cmp-teaser__image {
-  background-color: #fff
-}
-
-@media(min-width:1024px) {
-  .content-block.cmp-teaser--hero-background-color-white {
-      background-color: transparent
-  }
-}
-
-.content-block.cmp-teaser-image-background-horn-leaf-rectangle {
-  background-image: url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/icons/icon-rectangle-black-left.svg), url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/icons/icon-leaf-red-black-solid-outline-right.svg);
-  background-position: 0 100%, 100% 100%;
-  background-repeat: no-repeat, no-repeat
-}
-
-@media(min-width:1024px) {
-  .content-block.cmp-teaser-image-background-horn-leaf-rectangle {
-      background-image: url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/icons/icon-horn-black-left.svg), url(../../../../etc.clientlibs/fsnr/clientlibs/clientlib-assets/v1/resources/icons/icon-leaf-rectangle-red-black-solid-right.svg);
-      background-position: 0 100%, 100% 100%;
-      background-repeat: no-repeat, no-repeat
-  }
-
-  .content-block.cmp-teaser-image-background-1 .cmp-teaser .cmp-teaser__image {
-      background: url(/styles/resources/icons/bg-hero-image-background-1.svg) 50% no-repeat;
-      background-size: contain
-  }
-
-  .content-block.cmp-teaser-image-background-2 .cmp-teaser .cmp-teaser__image {
-      background: url(/styles/resources/icons/bg-hero-image-background-2.svg) 50% no-repeat;
-      background-size: contain
-  }
-
-  .content-block.cmp-teaser-image-background-3 .cmp-teaser .cmp-teaser__image {
-      background: url(/styles/resources/icons/bg-hero-image-background-3.svg) 50% no-repeat;
-      background-size: contain
-  }
-
-  .content-block.cmp-teaser-image-background-4 .cmp-teaser .cmp-teaser__image {
-      background: url(/styles/resources/icons/bg-hero-image-background-4.svg) 50% no-repeat;
-      background-size: contain
-  }
-}
-
-.content-block.cmp-teaser-image-background-5 .cmp-teaser .cmp-teaser__image {
-  text-align: center
-}
-
-.content-block.cmp-teaser-image-background-5 .cmp-teaser .cmp-teaser__image .cmp-image {
-  background: url(/styles/resources/icons/bg-hero-image-background-5.svg);
-  background-position: 100% 100%;
-  background-repeat: no-repeat;
-  background-size: calc(100% - 3pc) calc(100% - 3pc);
-  margin: 24px;
-  padding: 24px
-}
-
-.content-block.cmp-teaser-image-background-6 .cmp-teaser .cmp-teaser__image .cmp-image {
-  background: url(/styles/resources/icons/bg-hero-image-background-6.svg) 50% no-repeat;
-  background-size: contain;
-  padding: 3pc
-}
-
-@media(min-width:1024px) {
-  .content-block.cmp-teaser-image-background-6 .cmp-teaser .cmp-teaser__image .cmp-image {
-      background-size: auto
-  }
-}
-
-.content-block.cmp-teaser-image-background-7 .cmp-teaser .cmp-teaser__image .cmp-image {
-  background: url(/styles/resources/icons/bg-hero-image-background-7.svg) 0 no-repeat;
-  background-size: auto;
-  padding: 3pc
-}
-
-@media(min-width:1024px) {
-  .content-block.cmp-teaser-image-background-7 .cmp-teaser .cmp-teaser__image .cmp-image {
-      background-size: auto
-  }
-}
-
-.content-block.cmp-teaser-image-background-8 .cmp-teaser .cmp-teaser__image .cmp-image {
-  background: url(/styles/resources/icons/bg-hero-image-background-8.svg) 50% no-repeat;
-  background-size: contain;
-  padding: 3pc
-}
-
-@media(min-width:1024px) {
-  .content-block.cmp-teaser-image-background-8 .cmp-teaser .cmp-teaser__image .cmp-image {
-      background-size: contain
-  }
-}
-
-.content-block.cmp-teaser-image-background-9 .cmp-teaser .cmp-teaser__image .cmp-image {
-  background: url(/styles/resources/icons/bg-hero-image-background-9.svg) 50% no-repeat;
-  background-size: contain;
-  padding: 3pc
-}
-
-@media(min-width:1024px) {
-  .content-block.cmp-teaser-image-background-9 .cmp-teaser .cmp-teaser__image .cmp-image {
-      background-size: contain
-  }
-}
-
-.content-block.cmp-teaser-image-background-10 .cmp-teaser .cmp-teaser__image .cmp-image {
-  background: url(/styles/resources/icons/bg-hero-image-background-10.svg) 50% no-repeat;
-  background-size: contain;
-  padding: 3pc
-}
-
-@media(min-width:1024px) {
-  .content-block.cmp-teaser-image-background-10 .cmp-teaser .cmp-teaser__image .cmp-image {
-      background-size: contain
-  }
-
-  .content-block.hero-image-left .cmp-teaser .cmp-teaser__image {
-      order: 0
-  }
-
-  .content-block.hero-image-left .cmp-teaser .cmp-teaser__content,
-  .content-block.hero-image-right .cmp-teaser .cmp-teaser__image {
-      order: 1
-  }
-
-  .content-block.hero-image-right .cmp-teaser .cmp-teaser__content {
-      order: 0
-  }
-}
-
-.content-block.hero .cmp-teaser {
-  margin: 24px 1pc
-}
-
-.content-block.hero .cmp-teaser .cmp-teaser__image .cmp-image img {
-  margin: 24px auto
-}
-
-.content-block.hero .cmp-teaser .cmp-teaser__content .cmp-teaser__title {
-  font-size: 40px;
-  line-height: 54px
 }
 
 @media(min-width:1024px) {
@@ -309,206 +128,497 @@
   }
 
   .content-block.hero .cmp-teaser .cmp-teaser__image {
+      flex-basis: 50%;
+      margin: 0;
+      padding: 0
+  }
+
+  .content-block.hero .cmp-teaser .cmp-teaser__image .cmp-image .cmp-image__image {
+      width: auto
+  }
+
+  .content-block.hero .cmp-teaser .cmp-teaser__content {
+      flex-basis: 50%
+  }
+
+  .content-block.hero .cmp-teaser .cmp-teaser__content h2 {
+      font-size: 34px;
+      line-height: 46px
+  }
+}
+
+.content-block.hero.cmp-teaser-hero-background-color-gray,
+.content-block.hero.cmp-teaser-hero-background-color-gray .cmp-teaser .cmp-teaser__content,
+.content-block.hero.cmp-teaser-hero-background-color-gray .cmp-teaser .cmp-teaser__image {
+  background-color: #f0f0f0
+}
+
+@media(min-width:1024px) {
+  .content-block.hero.cmp-teaser-hero-background-color-gray {
+      background-color: transparent
+  }
+}
+
+.content-block.hero.cmp-teaser-hero-background-color-white,
+.content-block.hero.cmp-teaser-hero-background-color-white .cmp-teaser .cmp-teaser__content,
+.content-block.hero.cmp-teaser-hero-background-color-white .cmp-teaser .cmp-teaser__image {
+  background-color: #fff
+}
+
+@media(min-width:1024px) {
+  .content-block.hero.cmp-teaser-hero-background-color-white {
+      background-color: transparent
+  }
+}
+
+.content-block.hero.cmp-teaser-hero-background-horn-leaf-rectangle {
+  background-image: url(/styles/resources/icons/icon-rectangle-black-left.svg), url(/styles/resources/icons/icon-leaf-red-black-solid-outline-right.svg);
+  background-position: 0 100%, 100% 100%;
+  background-repeat: no-repeat, no-repeat
+}
+
+@media(min-width:1024px) {
+  .content-block.hero.cmp-teaser-hero-background-horn-leaf-rectangle {
+      background-image: url(/styles/resources/icons/icon-horn-black-left.svg), url(/styles/resources/icons/icon-leaf-rectangle-red-black-solid-right.svg);
+      background-position: 0 100%, 100% 100%;
+      background-repeat: no-repeat, no-repeat
+  }
+
+  .content-block.hero.cmp-teaser-hero-image-background-1 .cmp-teaser .cmp-teaser__image {
+      background: url(/styles/resources/icons/bg-hero-image-background-1.svg) 50% no-repeat;
+      background-size: contain
+  }
+
+  .content-block.hero.cmp-teaser-hero-image-background-2 .cmp-teaser .cmp-teaser__image {
+      background: url(/styles/resources/icons/bg-hero-image-background-2.svg) 50% no-repeat;
+      background-size: contain
+  }
+
+  .content-block.hero.cmp-teaser-hero-image-background-3 .cmp-teaser .cmp-teaser__image {
+      background: url(/styles/resources/icons/bg-hero-image-background-3.svg) 50% no-repeat;
+      background-size: contain
+  }
+
+  .content-block.hero.cmp-teaser-hero-image-background-4 .cmp-teaser .cmp-teaser__image {
+      background: url(/styles/resources/icons/bg-hero-image-background-4.svg) 50% no-repeat;
+      background-size: contain
+  }
+}
+
+.content-block.hero.cmp-teaser-hero-image-background-5 .cmp-teaser .cmp-teaser__image {
+  text-align: center
+}
+
+.content-block.hero.cmp-teaser-hero-image-background-5 .cmp-teaser .cmp-teaser__image .cmp-image {
+  background: url(/styles/resources/icons/bg-hero-image-background-5.svg);
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: calc(100% - 3pc) calc(100% - 3pc);
+  margin: 24px;
+  padding: 24px
+}
+
+.content-block.hero.cmp-teaser-hero-image-background-6 .cmp-teaser .cmp-teaser__image .cmp-image {
+  background: url(/styles/resources/icons/bg-hero-image-background-6.svg) 50% no-repeat;
+  background-size: contain;
+  padding: 3pc
+}
+
+@media(min-width:1024px) {
+  .content-block.hero.cmp-teaser-hero-image-background-6 .cmp-teaser .cmp-teaser__image .cmp-image {
+      background-size: auto
+  }
+}
+
+.content-block.hero.cmp-teaser-hero-image-background-7 .cmp-teaser .cmp-teaser__image .cmp-image {
+  background: url(/styles/resources/icons/bg-hero-image-background-7.svg) 0 no-repeat;
+  background-size: auto;
+  padding: 3pc
+}
+
+@media(min-width:1024px) {
+  .content-block.hero.cmp-teaser-hero-image-background-7 .cmp-teaser .cmp-teaser__image .cmp-image {
+      background-size: auto
+  }
+}
+
+.content-block.hero.cmp-teaser-hero-image-background-8 .cmp-teaser .cmp-teaser__image .cmp-image {
+  background: url(/styles/resources/icons/bg-hero-image-background-8.svg) 50% no-repeat;
+  background-size: contain;
+  padding: 3pc
+}
+
+@media(min-width:1024px) {
+  .content-block.hero.cmp-teaser-hero-image-background-8 .cmp-teaser .cmp-teaser__image .cmp-image {
+      background-size: contain
+  }
+}
+
+.content-block.hero.cmp-teaser-hero-image-background-9 .cmp-teaser .cmp-teaser__image .cmp-image {
+  background: url(/styles/resources/icons/bg-hero-image-background-9.svg) 50% no-repeat;
+  background-size: contain;
+  padding: 3pc
+}
+
+@media(min-width:1024px) {
+  .content-block.hero.cmp-teaser-hero-image-background-9 .cmp-teaser .cmp-teaser__image .cmp-image {
+      background-size: contain
+  }
+}
+
+.content-block.hero.cmp-teaser-hero-image-background-10 .cmp-teaser .cmp-teaser__image .cmp-image {
+  background: url(/styles/resources/icons/bg-hero-image-background-10.svg) 50% no-repeat;
+  background-size: contain;
+  padding: 3pc
+}
+
+@media(min-width:1024px) {
+  .content-block.hero.cmp-teaser-hero-image-background-10 .cmp-teaser .cmp-teaser__image .cmp-image {
+      background-size: contain
+  }
+
+  .content-block.hero.cmp-teaser-hero-image-left .cmp-teaser .cmp-teaser__image {
+      order: 0
+  }
+
+  .content-block.hero.cmp-teaser-hero-image-left .cmp-teaser .cmp-teaser__content,
+  .content-block.hero.cmp-teaser-hero-image-right .cmp-teaser .cmp-teaser__image {
+      order: 1
+  }
+
+  .content-block.hero.cmp-teaser-hero-image-right .cmp-teaser .cmp-teaser__content {
+      order: 0
+  }
+}
+
+.content-block.cmp-teaser-hero-main .cmp-teaser {
+  margin: 24px 1pc
+}
+
+.content-block.cmp-teaser-hero-main .cmp-teaser .cmp-teaser__image .cmp-image .cmp-image__image {
+  margin: 24px auto
+}
+
+.content-block.cmp-teaser-hero-main .cmp-teaser .cmp-teaser__content h1 {
+  font-size: 40px;
+  line-height: 54px
+}
+
+@media(min-width:1024px) {
+  .content-block.cmp-teaser-hero-main .cmp-teaser {
+      margin: 40px;
+      padding: 0
+  }
+
+  .content-block.cmp-teaser-hero-main .cmp-teaser .cmp-teaser__image {
       flex-basis: 60%;
       margin: 20px auto 50px
   }
 
-  .content-block.hero .cmp-teaser .cmp-teaser__content {
+  .content-block.cmp-teaser-hero-main .cmp-teaser .cmp-teaser__content {
       flex-basis: 40%
   }
 
-  .content-block.hero .cmp-teaser .cmp-teaser__content .cmp-teaser__title {
+  .content-block.cmp-teaser-hero-main .cmp-teaser .cmp-teaser__content h2 {
       font-size: 58px;
       line-height: 72px
   }
 }
 
-.cmp-teaser--hero-page .cmp-teaser .cmp-teaser__image .cmp-image img {
+.cmp-teaser-hero-page .cmp-teaser .cmp-teaser__image .cmp-image .cmp-image__image {
   margin: 24px auto
 }
 
-.cmp-teaser--hero-page .cmp-teaser .cmp-teaser__content .cmp-teaser__title {
+.cmp-teaser-hero-page .cmp-teaser .cmp-teaser__content h2 {
   font-size: 40px;
   line-height: 54px
 }
 
 @media(min-width:1024px) {
-  .cmp-teaser--hero-page .cmp-teaser {
+  .cmp-teaser-hero-page .cmp-teaser {
       margin: 40px;
       padding: 0
   }
 
-  .cmp-teaser--hero-page .cmp-teaser .cmp-teaser__image {
+  .cmp-teaser-hero-page .cmp-teaser .cmp-teaser__image {
       flex-basis: 50%;
       margin: 50px auto
   }
 
-  .cmp-teaser--hero-page .cmp-teaser .cmp-teaser__content {
+  .cmp-teaser-hero-page .cmp-teaser .cmp-teaser__content {
       flex-basis: 50%
   }
 
-  .cmp-teaser--hero-page .cmp-teaser .cmp-teaser__content .cmp-teaser__title {
+  .cmp-teaser-hero-page .cmp-teaser .cmp-teaser__content h2 {
       font-size: 58px;
       line-height: 72px
   }
 }
 
-.cmp-teaser--hero-subpage .cmp-teaser .cmp-teaser__content {
+.cmp-teaser-hero-subpage .cmp-teaser .cmp-teaser__content {
   margin: 0 auto 50px;
   text-align: center
 }
 
-.cmp-teaser--hero-subpage .cmp-teaser .cmp-teaser__content .cmp-teaser__title {
+.cmp-teaser-hero-subpage .cmp-teaser .cmp-teaser__content .h2 {
   font-size: 40px;
   line-height: 54px
 }
 
 @media(min-width:1024px) {
-  .cmp-teaser--hero-subpage .cmp-teaser {
+  .cmp-teaser-hero-subpage .cmp-teaser {
       margin: 40px;
       padding: 0
   }
 
-  .cmp-teaser--hero-subpage .cmp-teaser .cmp-teaser__content {
+  .cmp-teaser-hero-subpage .cmp-teaser .cmp-teaser__content {
       flex-basis: 67%;
       margin: 5pc auto
   }
 
-  .cmp-teaser--hero-subpage .cmp-teaser .cmp-teaser__content .cmp-teaser__title {
+  .cmp-teaser-hero-subpage .cmp-teaser .cmp-teaser__content h2 {
       font-size: 58px;
       line-height: 72px
   }
 }
 
-.cmp-teaser--hero-image .cmp-teaser .cmp-teaser__image {
+.content-block.cmp-teaser-hero-image .cmp-teaser .cmp-teaser__image {
   margin-bottom: 24px
 }
 
-.cmp-teaser--hero-image .cmp-teaser .cmp-teaser__image .cmp-image {
+.content-block.cmp-teaser-hero-image .cmp-teaser .cmp-teaser__image .cmp-image {
   padding: 24px
 }
 
 @media(min-width:1024px) {
-  .cmp-teaser--hero-image {
+  .content-block.cmp-teaser-hero-image {
       padding: 0
   }
 
-  .cmp-teaser--hero-image .cmp-teaser {
+  .content-block.cmp-teaser-hero-image .cmp-teaser {
       align-items: center
   }
 
-  .cmp-teaser--hero-image .cmp-teaser .cmp-teaser__image {
+  .content-block.cmp-teaser-hero-image .cmp-teaser .cmp-teaser__image {
       margin: 0
   }
 
-  .cmp-teaser--hero-image .cmp-teaser .cmp-teaser__content {
+  .content-block.cmp-teaser-hero-image .cmp-teaser .cmp-teaser__content {
       padding: 9pc 0
   }
 
-  .cmp-teaser--hero-image .cmp-teaser .cmp-teaser__content .cmp-teaser__title {
+  .content-block.cmp-teaser-hero-image .cmp-teaser .cmp-teaser__content h2 {
       padding: 0 72px;
       width: 75%
   }
 
-  .cmp-teaser--hero-image .cmp-teaser .cmp-teaser__content .cmp-teaser__action-container,
-  .cmp-teaser--hero-image .cmp-teaser .cmp-teaser__content .cmp-teaser__description {
+  .content-block.cmp-teaser-hero-image .cmp-teaser .cmp-teaser__content .button-container,
+  .content-block.cmp-teaser-hero-image .cmp-teaser .cmp-teaser__content p {
       padding: 0 72px
   }
 
-  .cmp-teaser--hero-image.cmp-teaser--hero-background-color-gray .cmp-teaser {
+  .content-block.cmp-teaser-hero-image.cmp-teaser-hero-background-color-gray .cmp-teaser {
       background-color: #f0f0f0
   }
 
-  .cmp-teaser--hero-image.cmp-teaser--hero-background-color-white .cmp-teaser {
+  .content-block.cmp-teaser-hero-image.cmp-teaser-hero-background-color-white .cmp-teaser {
       background-color: #fff
   }
 
-  .cmp-teaser--hero-image.cmp-teaser--hero-height-1 .cmp-teaser .cmp-teaser__content {
+  .content-block.content-block.cmp-teaser-hero-image.cmp-teaser-hero-height-1 .cmp-teaser .cmp-teaser__content {
       padding: 0
   }
 
-  .cmp-teaser--hero-image.cmp-teaser--hero-height-2 .cmp-teaser .cmp-teaser__content {
+  .content-block.cmp-teaser-hero-image.cmp-teaser-hero-height-2 .cmp-teaser .cmp-teaser__content {
       padding: 72px 0
   }
 
-  .cmp-teaser--hero-image.cmp-teaser--hero-height-3 .cmp-teaser .cmp-teaser__content {
+  .content-block.cmp-teaser-hero-image.cmp-teaser-hero-height-3 .cmp-teaser .cmp-teaser__content {
       padding: 9pc 0
   }
 }
 
-.cmp-teaser--hero-image-background .cmp-teaser {
+.content-block.cmp-teaser-hero-image-background .cmp-teaser {
   background-color: #f0f0f0;
   margin: 0
 }
 
-.cmp-teaser--hero-image-background .cmp-teaser .cmp-teaser__image {
+.content-block.cmp-teaser-hero-image-background .cmp-teaser .cmp-teaser__image {
   height: 100%;
   position: absolute;
   width: 100%
 }
 
-.cmp-teaser--hero-image-background .cmp-teaser .cmp-teaser__image .cmp-image img {
+.content-block.cmp-teaser-hero-image-background .cmp-teaser .cmp-teaser__image .cmp-image .cmp-image__image {
   height: 100%;
   object-fit: cover;
   position: absolute;
   width: 100%
 }
 
-.cmp-teaser--hero-image-background .cmp-teaser .cmp-teaser__content {
+.content-block.cmp-teaser-hero-image-background .cmp-teaser .cmp-teaser__content {
   margin: 24px;
   padding: 24px;
   z-index: 1
 }
 
 @media(min-width:1024px) {
-  .cmp-teaser--hero-image-background .cmp-teaser {
+  .content-block.cmp-teaser-hero-image-background .cmp-teaser {
       background-color: transparent;
       margin: 40px
   }
 
-  .cmp-teaser--hero-image-background .cmp-teaser .cmp-teaser__content {
+  .content-block.cmp-teaser-hero-image-background .cmp-teaser .cmp-teaser__content {
       margin: 40px auto;
       max-width: 40pc;
       padding: 4pc
   }
 
-  .cmp-teaser--hero-image-background .cmp-teaser .cmp-teaser__content .cmp-teaser__title {
+  .content-block.cmp-teaser-hero-image-background .cmp-teaser .cmp-teaser__content h2 {
       font-size: 40px;
       line-height: 54px
   }
 }
 
-.content-block.hero-image-fill .cmp-teaser .cmp-teaser__image .cmp-image img {
-  margin: 0 0 24px;
-  width: 100%
+.content-block.cmp-teaser-hero-image-fill .cmp-teaser .cmp-teaser__image .cmp-image .cmp-image__image {
+  margin: 0 0 24px !important;
+  width: 100%  !important;
 }
 
 @media(min-width:1024px) {
-  .content-block.hero-image-fill .cmp-teaser {
-      align-items: stretch
+  .cmp-teaser-hero-image-fill .cmp-teaser {
+      align-items: stretch !important;
   }
 
-  .content-block.hero-image-fill .cmp-teaser .cmp-teaser__image .cmp-image {
-      height: 100%;
-      position: relative;
-      width: 100%
+  .cmp-teaser-hero-image-fill .cmp-teaser .cmp-teaser__image .cmp-image {
+      height: 100% !important;
+      position: relative !important;
+      width: 100% !important;
   }
 
-  .content-block.hero-image-fill .cmp-teaser .cmp-teaser__image .cmp-image img {
-      height: 100%;
-      margin: 0;
-      object-fit: cover;
-      position: absolute;
-      width: 100%
+  .cmp-teaser-hero-image-fill .cmp-teaser .cmp-teaser__image .cmp-image .cmp-image__image {
+      height: 100% !important;
+      margin: 0 !important;
+      object-fit: cover !important;
+      position: absolute !important;
+      width: 100% !important;
   }
 
-  .content-block.hero-image-fill .cmp-teaser .cmp-teaser__content {
-      padding: 9pc 0
+  .cmp-teaser-hero-image-fill .cmp-teaser .cmp-teaser__content {
+      padding: 9pc 0 !important;
   }
 
-  .content-block.hero-image-fill .cmp-teaser .cmp-teaser__content .button-container,
-  .content-block.hero-image-fill .cmp-teaser .cmp-teaser__content p,
-  .content-block.hero-image-fill .cmp-teaser .cmp-teaser__content h2 {
-      padding: 0 72px
+  .cmp-teaser-hero-image-fill .cmp-teaser .cmp-teaser__content .button-container,
+  .cmp-teaser-hero-image-fill .cmp-teaser .cmp-teaser__content > p,
+  .cmp-teaser-hero-image-fill .cmp-teaser .cmp-teaser__content > h2 {
+      padding: 0 72px !important;
   }
 }
+
+
+/* fast facts */
+
+.section.container-fast-facts {
+  background-color: #EEEEEE;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+}
+
+.section.container-fast-facts .default-content-wrapper {
+  flex-basis: 100%;
+}
+
+.section.container-fast-facts .default-content-wrapper h2 {
+  margin: 20px;
+  margin-top: 0;
+  max-width: 100%;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.container-fast-facts {
+  padding: 40px 0;
+}
+
+@media (min-width: 1024px) {
+  .section.container-fast-facts.cmp-section-background-leaf-black-red-outline {
+      background-image: url(/styles/resources/icons/icon-leaf-black-red-outline-left.svg),url(/styles/resources/icons/icon-leaf-black-red-outline-right.svg);
+      background-position: 0 100%,100% 100%;
+      background-repeat: no-repeat,no-repeat;
+  }
+}
+
+.cmp-teaser-card-fast-facts .cmp-teaser {
+  background-color: #fff;
+  height: 15pc;
+  margin: 0 auto 40px;
+  padding: 40px 24px;
+  width: 16pc
+}
+
+.cmp-teaser-card-fast-facts .cmp-teaser .cmp-teaser__image {
+  margin-bottom: 40px
+}
+
+.cmp-teaser-card-fast-facts .cmp-teaser .cmp-teaser__image .cmp-image__image {
+  display: block;
+  margin: 0 auto;
+  width: auto
+}
+
+.cmp-teaser-card-fast-facts .cmp-teaser em {
+  color: #d30000;
+  font-size: 14px;
+  line-height: 1pc;
+  margin-bottom: 1pc
+}
+
+.cmp-teaser-card-fast-facts .cmp-teaser em,
+.cmp-teaser-card-fast-facts .cmp-teaser h2 {
+  font-family: avenir-heavy, '-apple-system, BlinkMacSystemFont, Helvetica, "Segoe UI", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
+  text-align: center
+}
+
+.cmp-teaser-card-fast-facts .cmp-teaser h2 {
+  color: #000;
+  font-size: 24px;
+  line-height: 2pc;
+  margin: 0 0 1pc
+}
+
+.cmp-teaser-card-fast-facts .cmp-teaser h2 a {
+  color: #000;
+  text-decoration: none
+}
+
+.cmp-teaser-card-fast-facts .cmp-teaser p {
+  color: #000;
+  font-family: avenir-medium, '-apple-system, BlinkMacSystemFont, Helvetica, "Segoe UI", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
+  font-size: 14px;
+  line-height: 22px;
+  margin: 0 0 1pc;
+  text-align: center
+}
+
+.cmp-teaser-card-fast-facts .cmp-teaser .button-container {
+  text-align: center
+}
+
+.cmp-teaser-card-fast-facts .button-container a {
+  background-color: #d30000;
+  border-radius: 4px;
+  color: #fff;
+  font-family: avenir-heavy, '-apple-system, BlinkMacSystemFont, Helvetica, "Segoe UI", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
+  padding: 9pt 24px;
+  text-decoration: none
+}
+
+
+ 
+ 
+
+ 
+ 

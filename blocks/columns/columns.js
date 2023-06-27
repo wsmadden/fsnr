@@ -4,15 +4,34 @@ export default function decorate(block) {
 
   // setup image columns
   [...block.children].forEach((row) => {
+
+    row.className = "card teaser";
+     
     [...row.children].forEach((col) => {
-      const pic = col.querySelector('picture');
-      if (pic) {
-        const picWrapper = pic.closest('div');
-        if (picWrapper && picWrapper.children.length === 1) {
-          // picture is only content in column
-          picWrapper.classList.add('columns-img-col');
+      console.log("col", col);
+
+      col.className = "cmp-teaser";
+
+      [...col.children].forEach((el) => {
+
+        const pictureEl = el.querySelector('picture');
+  
+        if (el.children.length === 1 && pictureEl) {
+          el.className = 'cmp-teaser__image'
+          pictureEl.querySelector("img").classList.add("cmp-image__image");
+          
+          let imageWrapper = document.createElement("div");
+          imageWrapper.classList.add("cmp-image");
+          imageWrapper.append(pictureEl);
+          el.append(imageWrapper);
+  
+        } 
+        else {
+          el.className = 'cmp-teaser__content'
         }
-      }
+  
+      });
+
     });
   });
 }

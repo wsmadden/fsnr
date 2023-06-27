@@ -2,21 +2,21 @@ import { createOptimizedPicture } from '../../scripts/lib-franklin.js';
 
 export default function decorate(block) {
 
-  const h1 = block.querySelector('div.tutorial h1');
-
   [...block.children].forEach((div) => {
 
     div.className = "cmp-teaser";
 
     [...div.children].forEach((div) => {
 
-      if (div.children.length === 1 && div.querySelector('picture')) {
+      const pictureEl = div.querySelector('picture');
+
+      if (div.children.length === 1 && pictureEl) {
         div.className = 'cmp-teaser__image'
-
-
+        pictureEl.querySelector("img").classList.add("cmp-image__image");
+        
         let imageWrapper = document.createElement("div");
         imageWrapper.classList.add("cmp-image");
-        imageWrapper.append(div.querySelector('picture'));
+        imageWrapper.append(pictureEl);
         div.append(imageWrapper);
 
       } 
