@@ -70,3 +70,7 @@
 .article-list .article-card .article-card__headline a:hover {
     text-decoration: none
 }
+
+.article-list-container .button-container {
+    text-align: center;
+}

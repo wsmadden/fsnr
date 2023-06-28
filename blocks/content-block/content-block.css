@@ -111,10 +111,10 @@
   line-height: 1.5
 }
 
-.content-block.hero .cmp-teaser .cmp-teaser__content .button-container a {
+ .button-container a {
   background-color: #d30000;
   border-radius: 4px;
-  color: #fff;
+  color: #fff !important;
   display: inline-block;
   font-family: avenir-heavy, '-apple-system, BlinkMacSystemFont, Helvetica, "Segoe UI", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
   padding: 9pt 24px;
@@ -539,6 +539,10 @@
   text-transform: uppercase;
 }
 
+.section.container-fast-facts .default-content-wrapper p {
+  text-align: center;
+}
+
 .container-fast-facts {
   padding: 40px 0;
 }
@@ -615,6 +619,62 @@
   padding: 9pt 24px;
   text-decoration: none
 }
+
+.cmp-teaser-card-fast-facts-2 .cmp-teaser {
+  background-color: #fff;
+  height: 170px;
+  margin: 30px auto 30px;
+  padding: 60px 24px;
+  width: 16pc
+}
+
+.cmp-teaser-card-fast-facts-2 .cmp-teaser .cmp-teaser__image {
+  margin-bottom: 40px
+}
+
+.cmp-teaser-card-fast-facts-2 .cmp-teaser .cmp-teaser__image .cmp-image__image {
+  display: block;
+  margin: 0 auto;
+  width: auto
+}
+
+.cmp-teaser-card-fast-facts-2 .cmp-teaser .cmp-teaser__content .cmp-teaser__pretitle {
+  font-size: 14px;
+  line-height: 1pc;
+  margin-bottom: 1pc
+}
+
+.cmp-teaser-card-fast-facts-2 .cmp-teaser .cmp-teaser__content .cmp-teaser__pretitle,
+.cmp-teaser-card-fast-facts-2 .cmp-teaser .cmp-teaser__content em {
+  color: #d30000;
+  font-family: avenir-black, '-apple-system, BlinkMacSystemFont, Helvetica, "Segoe UI", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
+  text-align: center;
+  font-style: normal;
+}
+
+.cmp-teaser-card-fast-facts-2 .cmp-teaser .cmp-teaser__content em {
+  font-size: 5pc;
+  line-height: 5pc;
+  margin: 0 0 1pc
+}
+
+.cmp-teaser-card-fast-facts-2 .cmp-teaser .cmp-teaser__content .cmp-teaser__title .cmp-teaser__title-link {
+  color: #d30000;
+  text-decoration: none
+}
+
+.cmp-teaser-card-fast-facts-2 .cmp-teaser p.cmp-teaser__content {
+  color: #000;
+  font-family: avenir-medium, '-apple-system, BlinkMacSystemFont, Helvetica, "Segoe UI", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
+  font-size: 24px;
+  line-height: 2pc;
+  text-align: center
+}
+
+.cmp-teaser-card-fast-facts-2 .cmp-teaser .cmp-teaser__content .cmp-teaser__action-container {
+  text-align: center
+}
+
 
 
  

@@ -1,3 +1,7 @@
+.separator-wrapper {
+    flex-basis: 100%;
+}
+
 .separator.block {
     padding: 24px 0 0;
 }
@@ -21,4 +25,8 @@
     padding: 0 4px;
     position: relative;
     top: -9pt;
+}
+
+.separator.cmp-separator-gray hr:after {
+    background-color: #eee
 }
